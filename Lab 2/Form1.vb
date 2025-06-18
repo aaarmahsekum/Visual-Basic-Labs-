@@ -1,21 +1,27 @@
 ﻿Public Class Form1
+    Private RetailPrice As Decimal
+    Private WholesalCost As Decimal
+    Private Quantity As Integer
+    Private GrossProfit As Decimal
+    Private StorageCharges As Decimal
+    Private NetProfit As Decimal
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
 
-    Private Sub MaskedTextBox3_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox3.MaskInputRejected
+    Private Sub MaskedTextBox3_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
-        MaskedTextBox1.Text = " "
-        MaskedTextBox2.Text = " "
-        MaskedTextBox3.Text = " "
-        MaskedTextBox4.Text = " "
-        MaskedTextBox5.Text = " "
-        MaskedTextBox6.Text = " "
+        TextBox1.Text = " "
+        TextBox2.Text = " "
+        TextBox3.Text = " "
+        TextBox4.Text = " "
+        TextBox5.Text = " "
+        TextBox6.Text = " "
 
     End Sub
 
@@ -23,19 +29,19 @@
 
     End Sub
 
-    Private Sub MaskedTextBox2_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox2.MaskInputRejected
+    Private Sub MaskedTextBox2_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
 
     End Sub
 
-    Private Sub MaskedTextBox4_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox4.MaskInputRejected
+    Private Sub MaskedTextBox4_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
 
     End Sub
 
-    Private Sub MaskedTextBox5_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox5.MaskInputRejected
+    Private Sub MaskedTextBox5_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
 
     End Sub
 
-    Private Sub MaskedTextBox6_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles MaskedTextBox6.MaskInputRejected
+    Private Sub MaskedTextBox6_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
 
     End Sub
 
@@ -44,6 +50,31 @@
         If Lab2 = DialogResult.Yes Then
             Me.Close()
         End If
+
+    End Sub
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            'Declaring Variables and constants
+            Dim RetailPrice, WholesaleCost, GrossProfit, NetProfit As Decimal
+            Dim Quantity As Integer
+            'Parsing and assigning
+            RetailPrice = Decimal.Parse(TextBox1.Text)
+            Quantity = Integer.Parse(TextBox2.Text)
+
+            'Computation
+            GrossProfit = (RetailPrice - WholesaleCost) * Quantity
+            Const StorageCharges = 5.0
+            NetProfit = (GrossProfit - StorageCharges)
+
+            'Restore values to Text Boxes
+            TextBox1.Text = TextBox1.ToString("C2")
+            TextBox2.Text = TextBox2.ToString("C2")
+
+        Catch ex As Exception
+            MessageBox.Show("Error in Retail Price, Wholeasale Cost, or Quantity ", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
 End Class

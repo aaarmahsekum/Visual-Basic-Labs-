@@ -28,12 +28,6 @@ Partial Class Form1
         Label2 = New Label()
         Label1 = New Label()
         GroupBox2 = New GroupBox()
-        MaskedTextBox6 = New MaskedTextBox()
-        MaskedTextBox5 = New MaskedTextBox()
-        MaskedTextBox4 = New MaskedTextBox()
-        MaskedTextBox3 = New MaskedTextBox()
-        MaskedTextBox2 = New MaskedTextBox()
-        MaskedTextBox1 = New MaskedTextBox()
         Label8 = New Label()
         Label7 = New Label()
         Label6 = New Label()
@@ -44,6 +38,12 @@ Partial Class Form1
         Button2 = New Button()
         Button3 = New Button()
         Button4 = New Button()
+        TextBox3 = New TextBox()
+        TextBox4 = New TextBox()
+        TextBox5 = New TextBox()
+        TextBox6 = New TextBox()
+        TextBox7 = New TextBox()
+        TextBox8 = New TextBox()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -98,12 +98,12 @@ Partial Class Form1
         ' 
         ' GroupBox2
         ' 
-        GroupBox2.Controls.Add(MaskedTextBox6)
-        GroupBox2.Controls.Add(MaskedTextBox5)
-        GroupBox2.Controls.Add(MaskedTextBox4)
-        GroupBox2.Controls.Add(MaskedTextBox3)
-        GroupBox2.Controls.Add(MaskedTextBox2)
-        GroupBox2.Controls.Add(MaskedTextBox1)
+        GroupBox2.Controls.Add(TextBox8)
+        GroupBox2.Controls.Add(TextBox7)
+        GroupBox2.Controls.Add(TextBox6)
+        GroupBox2.Controls.Add(TextBox5)
+        GroupBox2.Controls.Add(TextBox4)
+        GroupBox2.Controls.Add(TextBox3)
         GroupBox2.Controls.Add(Label8)
         GroupBox2.Controls.Add(Label7)
         GroupBox2.Controls.Add(Label6)
@@ -117,60 +117,6 @@ Partial Class Form1
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Price, Cost, Storage, Profit "
-        ' 
-        ' MaskedTextBox6
-        ' 
-        MaskedTextBox6.Location = New Point(226, 272)
-        MaskedTextBox6.Mask = "00000"
-        MaskedTextBox6.Name = "MaskedTextBox6"
-        MaskedTextBox6.Size = New Size(150, 31)
-        MaskedTextBox6.TabIndex = 14
-        MaskedTextBox6.ValidatingType = GetType(Integer)
-        ' 
-        ' MaskedTextBox5
-        ' 
-        MaskedTextBox5.Location = New Point(226, 221)
-        MaskedTextBox5.Mask = "00000"
-        MaskedTextBox5.Name = "MaskedTextBox5"
-        MaskedTextBox5.Size = New Size(150, 31)
-        MaskedTextBox5.TabIndex = 13
-        MaskedTextBox5.ValidatingType = GetType(Integer)
-        ' 
-        ' MaskedTextBox4
-        ' 
-        MaskedTextBox4.Location = New Point(226, 171)
-        MaskedTextBox4.Mask = "00000"
-        MaskedTextBox4.Name = "MaskedTextBox4"
-        MaskedTextBox4.Size = New Size(150, 31)
-        MaskedTextBox4.TabIndex = 12
-        MaskedTextBox4.ValidatingType = GetType(Integer)
-        ' 
-        ' MaskedTextBox3
-        ' 
-        MaskedTextBox3.Location = New Point(226, 70)
-        MaskedTextBox3.Mask = "00000"
-        MaskedTextBox3.Name = "MaskedTextBox3"
-        MaskedTextBox3.Size = New Size(150, 31)
-        MaskedTextBox3.TabIndex = 11
-        MaskedTextBox3.ValidatingType = GetType(Integer)
-        ' 
-        ' MaskedTextBox2
-        ' 
-        MaskedTextBox2.Location = New Point(226, 122)
-        MaskedTextBox2.Mask = "00000"
-        MaskedTextBox2.Name = "MaskedTextBox2"
-        MaskedTextBox2.Size = New Size(150, 31)
-        MaskedTextBox2.TabIndex = 10
-        MaskedTextBox2.ValidatingType = GetType(Integer)
-        ' 
-        ' MaskedTextBox1
-        ' 
-        MaskedTextBox1.Location = New Point(226, 30)
-        MaskedTextBox1.Mask = "00000"
-        MaskedTextBox1.Name = "MaskedTextBox1"
-        MaskedTextBox1.Size = New Size(150, 31)
-        MaskedTextBox1.TabIndex = 9
-        MaskedTextBox1.ValidatingType = GetType(Integer)
         ' 
         ' Label8
         ' 
@@ -268,6 +214,48 @@ Partial Class Form1
         Button4.Text = "Exit"
         Button4.UseVisualStyleBackColor = True
         ' 
+        ' TextBox3
+        ' 
+        TextBox3.Location = New Point(217, 30)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(150, 31)
+        TextBox3.TabIndex = 7
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Location = New Point(217, 122)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(150, 31)
+        TextBox4.TabIndex = 8
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.Location = New Point(217, 171)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(150, 31)
+        TextBox5.TabIndex = 9
+        ' 
+        ' TextBox6
+        ' 
+        TextBox6.Location = New Point(217, 221)
+        TextBox6.Name = "TextBox6"
+        TextBox6.Size = New Size(150, 31)
+        TextBox6.TabIndex = 10
+        ' 
+        ' TextBox7
+        ' 
+        TextBox7.Location = New Point(217, 272)
+        TextBox7.Name = "TextBox7"
+        TextBox7.Size = New Size(150, 31)
+        TextBox7.TabIndex = 11
+        ' 
+        ' TextBox8
+        ' 
+        TextBox8.Location = New Point(217, 73)
+        TextBox8.Name = "TextBox8"
+        TextBox8.Size = New Size(150, 31)
+        TextBox8.TabIndex = 12
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
@@ -301,15 +289,15 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents MaskedTextBox6 As MaskedTextBox
-    Friend WithEvents MaskedTextBox5 As MaskedTextBox
-    Friend WithEvents MaskedTextBox4 As MaskedTextBox
-    Friend WithEvents MaskedTextBox3 As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
 
 End Class
